@@ -16,8 +16,7 @@ class App extends React.Component {
     this.state = {
       videos: fakeVideoData.concat(moreFakeVideoData),
       currentVideo: fakeVideoData[1]
-    }
-    console.log(this.state);
+    };
   }
   render() {
     return (
