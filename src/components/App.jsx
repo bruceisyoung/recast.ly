@@ -1,15 +1,3 @@
-// var App = () => (
-//   <div>
-//     <Nav />
-//     <div className="col-md-7">
-//       <VideoPlayer/>
-//     </div>
-//     <div className="col-md-5">
-//       <VideoList/>
-//     </div>
-//   </div>
-// );
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -17,17 +5,13 @@ class App extends React.Component {
       videos: fakeVideoData.concat(moreFakeVideoData),
       currentVideo: fakeVideoData[1],
     };
+  }
+  setVideo() {
+    return function(video) {
+      this.setState({currentVideo: video});
+    }.bind(this)
+  }
 
-  },
-
-  // setVideo() {
-  //   return this.state.currentVideo;
-  // },
-
-  setVideo(video) {
-    console.log('SETTING STATE ON APP!!')
-    this.setState({currentVideo: video});
-  },
 
   render() {
     return (
@@ -37,7 +21,7 @@ class App extends React.Component {
           <VideoPlayer video={this.state.currentVideo}/>
         </div>
         <div className="col-md-5">
-          <VideoList videos={this.state.videos} setVideo = {this.setVideo.bind(this)}/>
+          <VideoList videos={this.state.videos} setVideo = {this.setVideo()}/>
         </div>
       </div>
       );

@@ -8,7 +8,7 @@ describe('App', function() {
 
   var app;
 
-  beforeEach(function() {
+  beforeEach(function() {  
     app = renderIntoDocument(
       <App searchYouTube={() => {}}/>
     );
