@@ -1,4 +1,4 @@
-describe ('VideoPlayer', function() {
+
   var {
     renderIntoDocument,
     findRenderedDOMComponentWithClass

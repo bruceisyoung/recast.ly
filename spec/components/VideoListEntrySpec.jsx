@@ -1,4 +1,4 @@
-describe('VideoListEntry', function() {
+
   var {
     renderIntoDocument,
     findRenderedDOMComponentWithClass
